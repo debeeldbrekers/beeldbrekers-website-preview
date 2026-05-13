@@ -2049,6 +2049,24 @@ hr.rule { border: 0; border-top: 1px solid var(--rule); margin: 3rem 0; }
 .landing-page .wa-fab {
   display: none;
 }
+@keyframes lpOrganicGradientDrift {
+  0% {
+    transform: translate3d(-4%, -2%, 0) scale(1) rotate(0deg);
+    opacity: 0.92;
+  }
+  36% {
+    transform: translate3d(3%, -5%, 0) scale(1.12) rotate(4deg);
+    opacity: 1;
+  }
+  72% {
+    transform: translate3d(-2%, 4%, 0) scale(1.06) rotate(-3deg);
+    opacity: 0.88;
+  }
+  100% {
+    transform: translate3d(4%, 2%, 0) scale(1.16) rotate(2deg);
+    opacity: 1;
+  }
+}
 .lp-nav {
   position: sticky;
   top: 0;
@@ -2079,19 +2097,21 @@ hr.rule { border: 0; border-top: 1px solid var(--rule); margin: 3rem 0; }
 .lp-hero::after {
   content: "";
   position: absolute;
-  inset: 0;
   pointer-events: none;
   z-index: 0;
 }
 .lp-hero::before {
+  inset: -28vmax;
   background:
-    radial-gradient(ellipse at 0% 8%, rgba(36, 245, 255, 0.32) 0%, transparent 38%),
-    radial-gradient(ellipse at 52% 48%, rgba(39, 255, 183, 0.24) 0%, transparent 34%),
-    radial-gradient(ellipse at 96% 92%, rgba(255, 41, 118, 0.56) 0%, transparent 40%);
-  background-attachment: fixed;
-  animation: ambientPinkDrift 18s cubic-bezier(0.2, 0.8, 0.24, 1) infinite alternate-reverse;
+    radial-gradient(ellipse at 8% 12%, rgba(36, 245, 255, 0.34) 0%, transparent 34%),
+    radial-gradient(ellipse at 54% 50%, rgba(39, 255, 183, 0.26) 0%, transparent 32%),
+    radial-gradient(ellipse at 90% 88%, rgba(255, 41, 118, 0.58) 0%, transparent 36%);
+  filter: blur(22px);
+  transform-origin: center;
+  animation: lpOrganicGradientDrift 18s cubic-bezier(0.2, 0.8, 0.24, 1) infinite alternate;
 }
 .lp-hero::after {
+  inset: 0;
   background: linear-gradient(180deg, rgba(16, 13, 33, 0.16) 0%, rgba(16, 13, 33, 0.72) 100%);
 }
 .lp-hero > * {
@@ -2156,10 +2176,13 @@ hr.rule { border: 0; border-top: 1px solid var(--rule); margin: 3rem 0; }
     rgba(255, 255, 255, 0.07);
   padding: clamp(1.5rem, 3vw, 2.75rem);
   box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+  min-width: 0;
+  overflow: hidden;
 }
 .lp-hvco-card h2 {
   margin-top: 1.5rem;
-  max-width: 10ch;
+  max-width: 13ch;
+  overflow-wrap: break-word;
 }
 .lp-hvco-card p {
   margin-top: 1.5rem;
@@ -2215,6 +2238,8 @@ hr.rule { border: 0; border-top: 1px solid var(--rule); margin: 3rem 0; }
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.045);
   padding: clamp(1.25rem, 2.5vw, 2rem);
+  min-width: 0;
+  overflow: hidden;
 }
 .lp-mini-card strong,
 .lp-stack__item strong {
@@ -2231,6 +2256,7 @@ hr.rule { border: 0; border-top: 1px solid var(--rule); margin: 3rem 0; }
   display: block;
   color: rgba(255, 255, 255, 0.78);
   line-height: 1.55;
+  overflow-wrap: break-word;
 }
 .lp-outcome {
   max-width: 1120px;
@@ -2257,7 +2283,7 @@ hr.rule { border: 0; border-top: 1px solid var(--rule); margin: 3rem 0; }
 }
 .lp-offer-stack {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
 .lp-offer-stack__item,
@@ -2265,6 +2291,8 @@ hr.rule { border: 0; border-top: 1px solid var(--rule); margin: 3rem 0; }
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.045);
   padding: clamp(1.25rem, 2.5vw, 2rem);
+  min-width: 0;
+  overflow: hidden;
 }
 .lp-offer-stack__item span,
 .lp-bonus-card span {
@@ -2279,19 +2307,23 @@ hr.rule { border: 0; border-top: 1px solid var(--rule); margin: 3rem 0; }
 .lp-offer-stack__item strong {
   display: block;
   font-family: var(--font-display);
-  font-size: clamp(1.15rem, 2vw, 1.5rem);
+  font-size: clamp(1.1rem, 1.65vw, 1.45rem);
   font-weight: 900;
   letter-spacing: -0.025em;
-  line-height: 1.12;
+  line-height: 1.16;
+  overflow-wrap: break-word;
 }
 .lp-offer-stack__item p,
 .lp-bonus-card p {
   margin-top: 0.9rem;
   color: rgba(255, 255, 255, 0.76);
   line-height: 1.55;
+  overflow-wrap: break-word;
 }
 .lp-bonus-card h3 {
-  max-width: 11ch;
+  max-width: none;
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  overflow-wrap: break-word;
 }
 .lp-guarantee {
   max-width: 1040px;
@@ -2319,6 +2351,8 @@ hr.rule { border: 0; border-top: 1px solid var(--rule); margin: 3rem 0; }
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.045);
   padding: 1.25rem 1.5rem;
+  min-width: 0;
+  overflow: hidden;
 }
 .lp-faq summary {
   cursor: pointer;
@@ -2326,6 +2360,7 @@ hr.rule { border: 0; border-top: 1px solid var(--rule); margin: 3rem 0; }
   font-size: clamp(1.1rem, 2vw, 1.45rem);
   line-height: 1.25;
   letter-spacing: -0.02em;
+  overflow-wrap: break-word;
 }
 .lp-faq p {
   margin-top: 1rem;
