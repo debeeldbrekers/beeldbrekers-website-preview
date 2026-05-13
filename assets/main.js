@@ -65,10 +65,17 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', e => {
       e.preventDefault();
       const btn = form.querySelector('button[type="submit"]');
+      const redirectUrl = form.dataset.redirect;
       btn.textContent = 'Verzonden. We mailen je terug';
       btn.disabled = true;
       btn.style.background = 'var(--mint)';
       btn.style.color = 'var(--purple)';
+      if (redirectUrl) {
+        btn.textContent = 'Verzonden. Je gaat door naar het aanbod';
+        window.setTimeout(() => {
+          window.location.href = redirectUrl;
+        }, 650);
+      }
     });
   }
 

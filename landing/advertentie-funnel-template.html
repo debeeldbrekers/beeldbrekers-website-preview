@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/styles.css?v=20260513s" />
+<link rel="stylesheet" href="../assets/styles.css?v=20260513t" />
 </head>
 <body class="landing-page">
 
@@ -19,7 +19,8 @@
   [DOELGROEP]        bijv. zorgorganisaties, gemeenten, scholen, HR-teams
   [PROBLEEM]         bijv. weinig sollicitaties, lage adoptie, onduidelijke uitleg
   [GEWENSTE UITKOMST] bijv. meer passende kandidaten, betere interne adoptie
-  [AANBOD]           bijv. recruitmentcampagne, uitlegfilm, contentcampagne
+  [HVCO]             bijv. gratis contentscan, campagne-audit, script-template, demo-loop
+  [GODFATHER OFFER]  aparte offerpagina: landing/godfather-offer-template.html
   [BEWIJS]           case, cijfer, testimonial of herkenbare klantcontext
 -->
 
@@ -31,44 +32,57 @@
 </header>
 
 <main>
-  <!-- 1. Above the fold: één belofte, één actie -->
+  <!-- 1. HVCO above the fold: één belofte, één opt-in -->
   <section class="lp-hero">
     <div class="wrap">
       <div class="lp-hero__grid">
         <div class="lp-hero__copy" data-reveal>
-          <span class="eyebrow">Advertentie landingpage template</span>
+          <span class="eyebrow">Gratis high-value content offer</span>
           <h1 class="display-l lp-title">
-            Stop met content die mooi is.
-            <em class="italic">Maak communicatie die beweegt.</em>
+            Ontdek waarom je content niet converteert
+            <em class="italic">zonder opnieuw te beginnen.</em>
           </h1>
           <p class="lead">
-            Voor organisaties die niet nog een losse video nodig hebben, maar een slimme campagne die een concreet communicatieprobleem oplost.
+            Vraag de gratis communicatiescan aan en zie in 15 minuten waar je boodschap, content of campagne nu lekt.
           </p>
+          <ul class="lp-benefits">
+            <li>De grootste frictie in je huidige boodschap</li>
+            <li>Welke doelgroepweerstand je eerst moet oplossen</li>
+            <li>Welke contentvorm de kortste route naar actie is</li>
+            <li>Waar je advertentiebudget waarschijnlijk weglekt</li>
+          </ul>
           <div class="cluster">
-            <a class="btn btn--accent" href="#aanvraag">Vraag een scherpe analyse aan</a>
-            <a class="btn btn--ghost" href="#mechanisme">Bekijk hoe het werkt</a>
+            <a class="btn btn--accent" href="#aanvraag">Stuur mij de gratis scan</a>
+            <a class="btn btn--ghost" href="#voor-wie">Voor wie is dit?</a>
           </div>
           <div class="lp-proof-row" aria-label="Bewijs en geruststelling">
-            <span>Geen standaard bureaupraat</span>
-            <span>Strategie, creatie en distributie</span>
-            <span>Voor maatschappelijke organisaties</span>
+            <span>Naam + e-mail</span>
+            <span>Geen spam</span>
+            <span>Direct bruikbaar voor je campagnebriefing</span>
           </div>
         </div>
         <div class="lp-hero__media" data-reveal>
-          <div class="surface-video" data-video-modal="../assets/media/kinderkoepel-1080.mp4" tabindex="0" role="button" aria-label="Bekijk voorbeeldvideo">
-            <video autoplay muted loop playsinline preload="metadata" poster="../assets/media/kinderkoepel-poster.jpg">
-              <source src="../assets/media/kinderkoepel-720.mp4" type="video/mp4">
-            </video>
-            <div class="play-button"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></div>
+          <div class="lp-hvco-card">
+            <span class="tag tag--accent">Gratis scan</span>
+            <h2>Communicatielekken die je vandaag al kunt dichten</h2>
+            <div class="lp-hvco-card__mock">
+              <span>01</span>
+              <strong>Probleem</strong>
+              <span>02</span>
+              <strong>Belofte</strong>
+              <span>03</span>
+              <strong>Bewijs</strong>
+            </div>
+            <p>Template voor: doelgroep, pijn, hook, bewijs, offer en eerste advertentiehoek.</p>
           </div>
-          <p class="muted">Voorbeeldcase · strategie, campagne, video en deliverables vanuit één systeem.</p>
+          <p class="muted">HVCO-regel: geef iets tastbaars dat het probleem zichtbaar maakt voordat je iets verkoopt.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- 2. Diagnose: laat de bezoeker zichzelf herkennen -->
-  <section class="section surface-deep">
+  <section class="section surface-deep" id="voor-wie">
     <div class="wrap">
       <div class="lp-split" data-reveal>
         <div>
@@ -153,20 +167,20 @@
     </div>
   </section>
 
-  <!-- 6. Value stack: wat zit er in het aanbod -->
+  <!-- 6. HVCO specifics: wat krijgt iemand na opt-in -->
   <section class="section surface-deep">
     <div class="wrap">
       <div class="section-head">
-        <div><span class="eyebrow">Wat je krijgt</span></div>
-        <div><h2>Geen losse video. Een complete <em class="italic">advertentiefunnel</em>.</h2></div>
+        <div><span class="eyebrow">Wat je gratis krijgt</span></div>
+        <div><h2>Een compacte scan die direct laat zien waar de <em class="italic">hefboom</em> zit.</h2></div>
       </div>
       <div class="lp-stack" data-reveal-stagger>
-        <div class="lp-stack__item"><strong>Funnelstrategie</strong><span>Doelgroep, pijnpunt, belofte, bewijs, CTA en meetplan.</span></div>
-        <div class="lp-stack__item"><strong>Creatief concept</strong><span>Een invalshoek die social-first werkt en niet voelt als gewone reclame.</span></div>
-        <div class="lp-stack__item"><strong>Hero video of animatie</strong><span>De kernboodschap in een format dat direct aandacht pakt.</span></div>
-        <div class="lp-stack__item"><strong>Short-form ads</strong><span>Varianten voor Meta, LinkedIn, TikTok of YouTube.</span></div>
-        <div class="lp-stack__item"><strong>Landingpage</strong><span>Een afleidingsarme pagina die de bezoeker stap voor stap naar actie brengt.</span></div>
-        <div class="lp-stack__item"><strong>Optimalisatie</strong><span>Bijsturen op signalen: clicks, kijktijd, scrollgedrag, aanvragen en kwaliteit van leads.</span></div>
+        <div class="lp-stack__item"><strong>Avatar scherpte</strong><span>Wie moet overtuigd worden, wat voelen ze nu en waar zit de echte weerstand?</span></div>
+        <div class="lp-stack__item"><strong>Hook diagnose</strong><span>Welke eerste zin of invalshoek verdient aandacht in social ads?</span></div>
+        <div class="lp-stack__item"><strong>Funnel check</strong><span>Wat moet de bezoeker zien vóórdat je om een aanvraag of gesprek vraagt?</span></div>
+        <div class="lp-stack__item"><strong>Contentadvies</strong><span>Welke vorm werkt waarschijnlijk het best: film, animatie, testimonial, landingpage of campagne?</span></div>
+        <div class="lp-stack__item"><strong>Bewijsinventarisatie</strong><span>Welke cases, quotes of cijfers maken je claim geloofwaardig?</span></div>
+        <div class="lp-stack__item"><strong>Volgende stap</strong><span>Een duidelijke keuze: zelf aanscherpen, testen met ads of door naar het Godfather Offer.</span></div>
       </div>
     </div>
   </section>
@@ -219,7 +233,23 @@
     </div>
   </section>
 
-  <!-- 8. Objection handling: voorkom twijfel vlak voor de CTA -->
+  <!-- 8. Godfather Offer preview: laat zien wat na de opt-in komt -->
+  <section class="section surface-accent">
+    <div class="wrap">
+      <div class="lp-offer-preview" data-reveal>
+        <div>
+          <span class="eyebrow">Na je aanvraag</span>
+          <h2>Je komt niet op een bedankpagina. Je krijgt het <em class="italic">Godfather Offer</em>.</h2>
+        </div>
+        <div class="flow">
+          <p class="lead">De scan is de eerste stap. Daarna tonen we een concreet aanbod met value stack, bonussen, power guarantee, schaarste en één duidelijke CTA.</p>
+          <a class="btn btn--primary" href="godfather-offer-template.html">Bekijk de offer-template</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Objection handling: voorkom twijfel vlak voor de CTA -->
   <section class="section surface-deep">
     <div class="wrap">
       <div class="section-head">
@@ -247,7 +277,7 @@
     </div>
   </section>
 
-  <!-- 9. CTA: aanvraag als kwalificatie, niet als generiek contactformulier -->
+  <!-- 10. CTA: korte opt-in, daarna redirect naar Godfather Offer -->
   <section class="section surface-accent" id="aanvraag">
     <div class="wrap">
       <div class="lp-form-grid">
@@ -255,7 +285,7 @@
           <span class="eyebrow">Volgende stap</span>
           <h2 class="display-m">Vraag een scherpe analyse aan.</h2>
           <p class="lead">
-            Vertel kort wat je wilt bereiken. Dan kijken wij of een advertentiefunnel logisch is, welke blokkade waarschijnlijk in de weg zit en welke eerste stap het meeste effect heeft.
+            Laat je naam en e-mail achter. Daarna ga je direct door naar de Godfather Offer-pagina, waar het echte aanbod staat.
           </p>
           <ul class="lp-checklist">
             <li>Reactie binnen één werkdag</li>
@@ -263,7 +293,7 @@
             <li>Geen generiek verkooppraatje</li>
           </ul>
         </div>
-        <form data-contact-form class="lp-form surface-light" data-reveal>
+        <form data-contact-form data-redirect="godfather-offer-template.html" class="lp-form surface-light" data-reveal>
           <div class="field">
             <label for="lp-naam">Naam</label>
             <input id="lp-naam" name="naam" type="text" required>
@@ -272,27 +302,8 @@
             <label for="lp-email">E-mailadres</label>
             <input id="lp-email" name="email" type="email" required>
           </div>
-          <div class="field">
-            <label for="lp-organisatie">Organisatie</label>
-            <input id="lp-organisatie" name="organisatie" type="text" required>
-          </div>
-          <div class="field">
-            <label for="lp-doel">Wat moet de campagne oplossen?</label>
-            <select id="lp-doel" name="doel" required>
-              <option value="">Kies een richting</option>
-              <option>Meer passende sollicitaties</option>
-              <option>Meer aanvragen of leads</option>
-              <option>Meer begrip of adoptie</option>
-              <option>Meer awareness of activatie</option>
-              <option>Anders</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="lp-context">Korte context</label>
-            <textarea id="lp-context" name="context" placeholder="Wat gebeurt er nu, wat heb je al geprobeerd en wanneer moet dit effect hebben?"></textarea>
-          </div>
-          <button class="btn btn--primary" type="submit">Plan een kennismaking!</button>
-          <p class="muted">Template-notitie: koppel dit formulier later aan je CRM, e-mailtool of advertentiecampagne.</p>
+          <button class="btn btn--primary" type="submit">Stuur mijn gratis scan</button>
+          <p class="muted">Demo: dit formulier redirect naar de Godfather Offer-template. Koppel later aan MailerLite, ActiveCampaign, HubSpot of je CRM.</p>
         </form>
       </div>
     </div>
@@ -306,6 +317,6 @@
   </div>
 </footer>
 
-<script src="../assets/main.js?v=20260513s"></script>
+<script src="../assets/main.js?v=20260513t"></script>
 </body>
 </html>
