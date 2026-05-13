@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  De BeeldBrekers: wordmark on light surface (purple text + neon ghost B)
+  Placeholder rebuilt from preview image. Replace with original vector when available.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 290" role="img" aria-label="De BeeldBrekers">
+  <style>
+    .wm { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 78px; letter-spacing: -2px; }
+    .b  { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 290px; letter-spacing: -10px; }
+  </style>
+  <!-- B with chromatic ghost effect -->
+  <g>
+    <text class="b" x="36" y="246" fill="#FF2976" transform="translate(10 14)">B</text>
+    <text class="b" x="36" y="246" fill="#27FFB7" transform="translate(-6 8)">B</text>
+    <text class="b" x="36" y="246" fill="#24F5FF" transform="translate(2 -2)">B</text>
+    <text class="b" x="36" y="246" fill="#2E294E">B</text>
+  </g>
+  <!-- Stacked wordmark -->
+  <g fill="#2E294E" class="wm">
+    <text x="280" y="80">DE</text>
+    <text x="280" y="170">BEELD</text>
+    <text x="280" y="260">BREKERS</text>
+  </g>
+</svg>

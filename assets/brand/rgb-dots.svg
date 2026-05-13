@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51.92 15.44">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #27f6ff;
+      }
+
+      .cls-2 {
+        fill: #28ffb7;
+      }
+
+      .cls-3 {
+        fill: #ff2976;
+      }
+    </style>
+  </defs>
+  <g id="RGB_dots" data-name="RGB dots">
+    <path id="R" class="cls-3" d="M15.44,7.72c0,4.26-3.46,7.72-7.72,7.72S0,11.98,0,7.72,3.46,0,7.72,0s7.72,3.46,7.72,7.72"/>
+    <path id="G" class="cls-2" d="M33.68,7.72c0,4.26-3.46,7.72-7.72,7.72s-7.72-3.46-7.72-7.72S21.7,0,25.96,0s7.72,3.46,7.72,7.72"/>
+    <path id="B" class="cls-1" d="M51.92,7.72c0,4.26-3.46,7.72-7.72,7.72s-7.72-3.46-7.72-7.72,3.46-7.72,7.72-7.72,7.72,3.46,7.72,7.72"/>
+  </g>
+</svg>
