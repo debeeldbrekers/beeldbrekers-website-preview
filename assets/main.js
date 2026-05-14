@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const portfolioCases = [
     {
       slug: 'kinderkoepel',
-      video: 'assets/cases/kinderkoepel/Kinderkoepel_BSO_Main_260226.mp4',
+      video: 'assets/previews/cards/kinderkoepel-card.mp4',
       label: 'Bekijk case',
       tags: ['Recruitment', 'Hero film', 'Kinderkoepel'],
       title: 'Een recruitmentcampagne die laat zien wat het werk in de kinderopvang écht is.',
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       slug: 'parnassia-beveiliging',
-      video: 'assets/cases/parnassia/beveiliging/Parnassia_Beveiliging_hero.mp4',
+      video: 'assets/previews/cards/parnassia-beveiliging-card.mp4',
       label: 'Bekijk case',
       tags: ['Recruitment', 'Employer branding', 'Parnassia'],
       title: 'GGZ-beveiliging menselijk, betekenisvol en zichtbaar gemaakt.',
@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       slug: 'parnassia',
       poster: 'assets/media/parnassia-poster.jpg',
-      video: 'assets/media/parnassia-720.mp4',
+      video: 'assets/previews/cards/parnassia-card.mp4',
       label: 'Bekijk case',
       tags: ['Animatie', 'Zorgcommunicatie', 'Autisme'],
       title: 'Voor Parnassia een complex intakeproces helder uitgelegd.',
@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       slug: 'gemiva',
       poster: 'assets/media/gemiva-poster.jpg',
-      video: 'assets/cases/gemiva/Gemiva-module-01-overzicht-zorgtechnologie.mp4',
+      video: 'assets/previews/cards/gemiva-card.mp4',
       label: 'Bekijk case',
       tags: ['E-learning', 'Zorgdomotica', 'Gemiva'],
       title: 'Complexe zorgdomotica vertaald naar trainingscontent die medewerkers dagelijks gebruiken.',
@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       slug: 'leraren-van-het-jaar',
-      video: 'assets/cases/leraren-van-het-jaar/lerarenvanhetjaar-260130.mp4',
+      video: 'assets/previews/cards/leraren-van-het-jaar-card.mp4',
       label: 'Bekijk case',
       tags: ['Uitleganimatie', 'Activatie', 'Onderwijs'],
       title: 'Een landelijke onderwijsverkiezing vertaald naar een speelse animatie die mensen activeert.',
@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       slug: 'cao-rijk',
-      video: 'assets/cases/min-bzk/cao rijk 2026 versie 08.mp4',
+      video: 'assets/previews/cards/cao-rijk-card.mp4',
       label: 'Bekijk case',
       tags: ['Awareness', 'Motion graphics', 'CAO Rijk'],
       title: 'Een duurzame CAO-pilot vertaald naar een filmcampagne over beweging en systeemverandering.',
@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       slug: 'world-bank',
       poster: 'assets/media/worldbank-poster.jpg',
-      video: 'assets/cases/worldbank/Worldbank_Main.mp4',
+      video: 'assets/previews/cards/world-bank-card.mp4',
       label: 'Bekijk case',
       tags: ['Datavisualisatie', 'Motion design', 'World Bank'],
       title: 'Complexe voedselzekerheidsdata vertaald naar heldere animaties voor internationale besluitvorming.',
@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       slug: 'channext',
       poster: 'assets/media/channext-poster.jpg',
-      video: 'assets/media/channext-720.mp4',
+      video: 'assets/previews/cards/channext-card.mp4',
       label: 'Bekijk case',
       tags: ['SaaS', 'Positionering', 'Channext'],
       title: 'Complexe AI-gedreven channel marketing vertaald naar een helder B2B-verhaal.',
@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       slug: 'ict-group',
       poster: 'assets/media/ictgroup-poster.jpg',
-      video: 'assets/media/ictgroup-720.mp4',
+      video: 'assets/previews/cards/ict-group-card.mp4',
       label: 'Bekijk case',
       tags: ['Marketing video', 'Campagne', 'ICT Group'],
       title: 'Een campagnefilm voor Applied Solutions die meer doet dan uitleggen.',
