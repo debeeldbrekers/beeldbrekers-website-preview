@@ -79,6 +79,169 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  const isSubPage = window.location.pathname.split('/').filter(Boolean).length > 1;
+  const assetPath = (path) => `${isSubPage ? '../' : ''}${path}`;
+  const casePath = (slug) => {
+    if (window.location.pathname.includes('/werk/')) return `${slug}.html`;
+    if (isSubPage) return `../werk/${slug}.html`;
+    return `werk/${slug}.html`;
+  };
+  const portfolioCases = [
+    {
+      slug: 'kinderkoepel',
+      video: 'assets/cases/kinderkoepel/Kinderkoepel_BSO_Main_260226.mp4',
+      label: 'Bekijk case',
+      tags: ['Recruitment', 'Hero film', 'Kinderkoepel'],
+      title: 'Een recruitmentcampagne die laat zien wat het werk in de kinderopvang écht is.',
+      meta: 'Kinderkoepel · Kinderopvang · Hero film + cuts'
+    },
+    {
+      slug: 'parnassia-beveiliging',
+      video: 'assets/cases/parnassia/beveiliging/Parnassia_Beveiliging_hero.mp4',
+      label: 'Bekijk case',
+      tags: ['Recruitment', 'Employer branding', 'Parnassia'],
+      title: 'GGZ-beveiliging menselijk, betekenisvol en zichtbaar gemaakt.',
+      meta: 'Parnassia · GGZ · Recruitmentcampagne'
+    },
+    {
+      slug: 'parnassia',
+      poster: 'assets/media/parnassia-poster.jpg',
+      video: 'assets/media/parnassia-720.mp4',
+      label: 'Bekijk case',
+      tags: ['Animatie', 'Zorgcommunicatie', 'Autisme'],
+      title: 'Voor Parnassia een complex intakeproces helder uitgelegd.',
+      meta: 'Parnassia · Centrum Autisme Haaglanden · Uitleganimatie'
+    },
+    {
+      slug: 'gemiva',
+      poster: 'assets/media/gemiva-poster.jpg',
+      video: 'assets/cases/gemiva/Gemiva-module-01-overzicht-zorgtechnologie.mp4',
+      label: 'Bekijk case',
+      tags: ['E-learning', 'Zorgdomotica', 'Gemiva'],
+      title: 'Complexe zorgdomotica vertaald naar trainingscontent die medewerkers dagelijks gebruiken.',
+      meta: 'Gemiva · Zorgdomotica · Trainingscontent'
+    },
+    {
+      slug: 'leraren-van-het-jaar',
+      video: 'assets/cases/leraren-van-het-jaar/lerarenvanhetjaar-260130.mp4',
+      label: 'Bekijk case',
+      tags: ['Uitleganimatie', 'Activatie', 'Onderwijs'],
+      title: 'Een landelijke onderwijsverkiezing vertaald naar een speelse animatie die mensen activeert.',
+      meta: 'Leraren van het Jaar · ImpactAll · Publiekscampagne'
+    },
+    {
+      slug: 'cao-rijk',
+      video: 'assets/cases/min-bzk/cao rijk 2026 versie 08.mp4',
+      label: 'Bekijk case',
+      tags: ['Awareness', 'Motion graphics', 'CAO Rijk'],
+      title: 'Een duurzame CAO-pilot vertaald naar een filmcampagne over beweging en systeemverandering.',
+      meta: 'Ministerie van BZK · CAO Rijk · Awarenesscampagne'
+    },
+    {
+      slug: 'world-bank',
+      poster: 'assets/media/worldbank-poster.jpg',
+      video: 'assets/cases/worldbank/Worldbank_Main.mp4',
+      label: 'Bekijk case',
+      tags: ['Datavisualisatie', 'Motion design', 'World Bank'],
+      title: 'Complexe voedselzekerheidsdata vertaald naar heldere animaties voor internationale besluitvorming.',
+      meta: 'World Bank · Voedselzekerheid · Uitleganimaties'
+    },
+    {
+      slug: 'channext',
+      poster: 'assets/media/channext-poster.jpg',
+      video: 'assets/media/channext-720.mp4',
+      label: 'Bekijk case',
+      tags: ['SaaS', 'Positionering', 'Channext'],
+      title: 'Complexe AI-gedreven channel marketing vertaald naar een helder B2B-verhaal.',
+      meta: 'Channext · SaaS / B2B · Positioneringsvideo'
+    },
+    {
+      slug: 'ict-group',
+      poster: 'assets/media/ictgroup-poster.jpg',
+      video: 'assets/media/ictgroup-720.mp4',
+      label: 'Bekijk case',
+      tags: ['Marketing video', 'Campagne', 'ICT Group'],
+      title: 'Een campagnefilm voor Applied Solutions die meer doet dan uitleggen.',
+      meta: 'ICT Group · Tech / Industrie · Marketing campagne'
+    }
+  ];
+  const shuffle = (items) => {
+    const list = [...items];
+    for (let i = list.length - 1; i > 0; i -= 1) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [list[i], list[j]] = [list[j], list[i]];
+    }
+    return list;
+  };
+  const randomizeLogoMarquees = () => {
+    document.querySelectorAll('.marquee--logos').forEach(marquee => {
+      const tracks = marquee.querySelectorAll('.marquee__track');
+      const primaryTrack = tracks[0];
+      const duplicateTrack = tracks[1];
+      if (!primaryTrack || !duplicateTrack) return;
+
+      const logos = shuffle(Array.from(primaryTrack.querySelectorAll('.marquee__logo')));
+      primaryTrack.replaceChildren(...logos);
+      duplicateTrack.replaceChildren(...logos.map(logo => {
+        const clone = logo.cloneNode(true);
+        clone.querySelectorAll('img').forEach(img => img.alt = '');
+        return clone;
+      }));
+    });
+  };
+  const renderPortfolioCard = (item, templateCard, showMeta = false) => {
+    const card = document.createElement('a');
+    card.className = templateCard?.className || 'card';
+    card.href = casePath(item.slug);
+    const posterAttr = item.poster ? ` poster="${assetPath(item.poster)}"` : '';
+    card.innerHTML = `
+      <div class="card__media">
+        <video class="thumb" autoplay muted loop playsinline preload="metadata"${posterAttr}>
+          <source src="${assetPath(item.video)}" type="video/mp4">
+        </video>
+        <span class="play-pill">${item.label}</span>
+      </div>
+      <div class="card__body">
+        <div class="card__tags">${item.tags.map(tag => `<span>${tag}</span>`).join('')}</div>
+        <h3 class="card__title">${item.title}</h3>
+        ${showMeta ? `<p class="muted" style="font-size: 0.9375rem; margin-top: 0.5rem;">${item.meta}</p>` : '<span class="case-link-note">Naar case</span>'}
+      </div>
+    `;
+
+    const originalMedia = templateCard?.querySelector('.card__media');
+    const newMedia = card.querySelector('.card__media');
+    if (originalMedia?.getAttribute('style')) {
+      newMedia.setAttribute('style', originalMedia.getAttribute('style'));
+    }
+
+    return card;
+  };
+  const randomizePortfolioBlocks = () => {
+    const blocks = new Set();
+    document.querySelectorAll('.work-carousel__track, .work-grid, .grid').forEach(block => {
+      const caseCards = block.querySelectorAll('a[href*="werk/"], a[href$=".html"]');
+      const portfolioCards = Array.from(caseCards).filter(card => {
+        const href = card.getAttribute('href') || '';
+        return card.querySelector('video.thumb') && portfolioCases.some(item => href.includes(item.slug));
+      });
+      if (portfolioCards.length >= 2) {
+        blocks.add(block);
+      }
+    });
+
+    blocks.forEach(block => {
+      const templateCard = block.querySelector('a.card');
+      const isFullPortfolio = block.classList.contains('work-grid');
+      const showMeta = isFullPortfolio;
+      const selection = shuffle(portfolioCases).slice(0, isFullPortfolio ? portfolioCases.length : 3);
+      block.innerHTML = '';
+      selection.forEach(item => block.appendChild(renderPortfolioCard(item, templateCard, showMeta)));
+    });
+  };
+
+  randomizeLogoMarquees();
+  randomizePortfolioBlocks();
+
   // Work carousel
   document.querySelectorAll('[data-work-carousel]').forEach(carousel => {
     const track = carousel.querySelector('[data-work-carousel-track]');
@@ -99,8 +262,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const itemWidth = items[0].getBoundingClientRect().width;
       const gap = parseFloat(getComputedStyle(track).gap) || 0;
       track.style.transform = `translateX(${index * -(itemWidth + gap)}px)`;
-      prev.disabled = index === 0;
-      next.disabled = index === maxIndex;
+      if (prev) prev.disabled = index === 0;
+      if (next) next.disabled = index === maxIndex;
     };
 
     prev?.addEventListener('click', () => {
@@ -113,6 +276,52 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     window.addEventListener('resize', update, { passive: true });
     update();
+  });
+
+  // Keep muted preview videos moving consistently across portfolio cards.
+  const previewVideos = document.querySelectorAll('.card__media video.thumb, .surface-video video.thumb, .hero__bg video');
+  const startPreviewVideo = (video) => {
+    video.muted = true;
+    video.loop = true;
+    video.playsInline = true;
+    video.setAttribute('playsinline', '');
+    video.setAttribute('muted', '');
+    video.setAttribute('loop', '');
+
+    const source = video.currentSrc || video.querySelector('source')?.src || video.src || '';
+    const needsOffset = source.includes('kinderkoepel');
+    const applyOffset = () => {
+      if (!needsOffset || video.dataset.previewOffsetApplied === 'true') return;
+      if (!Number.isFinite(video.duration) || video.duration <= 1.8) return;
+      video.currentTime = Math.min(1.4, video.duration - 0.6);
+      video.dataset.previewOffsetApplied = 'true';
+    };
+
+    if (video.readyState >= 1) {
+      applyOffset();
+    } else {
+      video.addEventListener('loadedmetadata', applyOffset, { once: true });
+    }
+
+    video.play().catch(() => {});
+  };
+
+  const videoObserver = 'IntersectionObserver' in window
+    ? new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const video = entry.target;
+        if (entry.isIntersecting) {
+          startPreviewVideo(video);
+        } else if (!video.closest('[data-video-modal]')) {
+          video.pause();
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '160px 0px' })
+    : null;
+
+  previewVideos.forEach(video => {
+    startPreviewVideo(video);
+    videoObserver?.observe(video);
   });
 
   // Nav surface detection: scroll state + light-section overlap
@@ -170,9 +379,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const video = overlay.querySelector('video');
     if (video) {
-      video.muted = false;
-      video.volume = 1;
-      video.play().catch(() => {});
+      const enableSound = () => {
+        video.defaultMuted = false;
+        video.muted = false;
+        video.removeAttribute('muted');
+        video.volume = 1;
+      };
+      enableSound();
+      video.addEventListener('loadedmetadata', enableSound, { once: true });
+      video.addEventListener('play', enableSound, { once: true });
+      video.play().then(enableSound).catch(() => {});
     }
 
     const escClose = (e) => {
