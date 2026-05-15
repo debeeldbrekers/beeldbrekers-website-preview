@@ -148,6 +148,15 @@ document.addEventListener('DOMContentLoaded', () => {
       meta: 'Europebarge · Maritiem / heavy transport · Projectfilm'
     },
     {
+      slug: 'portlantis',
+      poster: 'assets/media/portlantis-poster.jpg',
+      video: 'assets/previews/cards/portlantis-card.mp4',
+      label: 'Bekijk case',
+      tags: ['Projection mapping', 'Experience', 'Portlantis'],
+      title: 'Een 10+ meter projection mapping experience die de Rotterdamse haven voelbaar maakt.',
+      meta: 'Portlantis · Bezoekerscentrum · Immersive experience'
+    },
+    {
       slug: 'world-bank',
       poster: 'assets/media/worldbank-poster.jpg',
       video: 'assets/previews/cards/world-bank-card.mp4',
