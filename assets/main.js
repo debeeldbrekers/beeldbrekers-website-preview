@@ -114,6 +114,15 @@ document.addEventListener('DOMContentLoaded', () => {
       meta: 'Parnassia · Centrum Autisme Haaglanden · Uitleganimatie'
     },
     {
+      slug: 'parnassia-wijkteams',
+      poster: 'assets/media/parnassia-wijkteams-poster.jpg',
+      video: 'assets/previews/cards/parnassia-wijkteams-card.mp4',
+      label: 'Bekijk case',
+      tags: ['Documentaire', 'Eventbranding', 'Parnassia'],
+      title: '10 jaar GGZ wijkteams vertaald naar een complete storytellingervaring.',
+      meta: 'Parnassia · GGZ wijkteams · Eventvisuals + documentaires'
+    },
+    {
       slug: 'gemiva',
       poster: 'assets/media/gemiva-poster.jpg',
       video: 'assets/previews/cards/gemiva-card.mp4',
