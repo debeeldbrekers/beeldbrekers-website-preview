@@ -139,6 +139,15 @@ document.addEventListener('DOMContentLoaded', () => {
       meta: 'Ministerie van BZK · CAO Rijk · Awarenesscampagne'
     },
     {
+      slug: 'europebarge',
+      poster: 'assets/media/europebarge-poster.jpg',
+      video: 'assets/previews/cards/europebarge-card.mp4',
+      label: 'Bekijk case',
+      tags: ['Corporate film', 'Offshore', 'Europebarge'],
+      title: 'Een offshore transportoperatie vertaald naar cinematografische precisie.',
+      meta: 'Europebarge · Maritiem / heavy transport · Projectfilm'
+    },
+    {
       slug: 'world-bank',
       poster: 'assets/media/worldbank-poster.jpg',
       video: 'assets/previews/cards/world-bank-card.mp4',
