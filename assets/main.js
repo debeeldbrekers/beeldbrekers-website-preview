@@ -154,8 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
       label: 'Bekijk case',
       tags: ['Projection mapping', 'Experience', 'Portlantis'],
       title: 'Een 10+ meter projection mapping experience die de Rotterdamse haven voelbaar maakt.',
-      meta: 'Portlantis · Bezoekerscentrum · Immersive experience',
-      mediaMode: 'contain'
+      meta: 'Portlantis · Bezoekerscentrum · Immersive experience'
     },
     {
       slug: 'socialdebt',
