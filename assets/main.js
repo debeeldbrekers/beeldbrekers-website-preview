@@ -161,9 +161,9 @@ document.addEventListener('DOMContentLoaded', () => {
       poster: 'assets/media/ictgroup-poster.jpg',
       video: 'assets/previews/cards/ict-group-card.mp4',
       label: 'Bekijk case',
-      tags: ['Marketing video', 'Campagne', 'ICT Group'],
-      title: 'Een campagnefilm voor Applied Solutions die meer doet dan uitleggen.',
-      meta: 'ICT Group · Tech / Industrie · Marketing campagne'
+      tags: ['Motion design', 'B2B tech', 'ICT Group'],
+      title: 'Complexe data vertaald naar een scherpe merkanimatie voor Applied Solutions.',
+      meta: 'ICT Group · Applied Solutions · Brand animation'
     }
   ];
   const shuffle = (items) => {
