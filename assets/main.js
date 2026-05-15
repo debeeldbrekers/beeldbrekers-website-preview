@@ -92,7 +92,9 @@ document.addEventListener('DOMContentLoaded', () => {
       slug: 'kinderkoepel',
       video: 'assets/previews/cards/kinderkoepel-card.mp4',
       label: 'Bekijk case',
-      tags: ['Recruitment', 'Hero film', 'Kinderkoepel'],
+      type: 'Campagnefilm',
+      service: 'Recruitmentcampagne',
+      industry: 'Kinderopvang',
       title: 'Een recruitmentcampagne die laat zien wat het werk in de kinderopvang écht is.',
       meta: 'Kinderkoepel · Kinderopvang · Hero film + cuts'
     },
@@ -100,7 +102,9 @@ document.addEventListener('DOMContentLoaded', () => {
       slug: 'parnassia-beveiliging',
       video: 'assets/previews/cards/parnassia-beveiliging-card.mp4',
       label: 'Bekijk case',
-      tags: ['Recruitment', 'Employer branding', 'Parnassia'],
+      type: 'Recruitmentfilm',
+      service: 'Employer branding',
+      industry: 'GGZ',
       title: 'GGZ-beveiliging menselijk, betekenisvol en zichtbaar gemaakt.',
       meta: 'Parnassia · GGZ · Recruitmentcampagne'
     },
@@ -109,7 +113,9 @@ document.addEventListener('DOMContentLoaded', () => {
       poster: 'assets/media/parnassia-poster.jpg',
       video: 'assets/previews/cards/parnassia-card.mp4',
       label: 'Bekijk case',
-      tags: ['Animatie', 'Zorgcommunicatie', 'Autisme'],
+      type: 'Uitleganimatie',
+      service: 'Uitlegcontent',
+      industry: 'GGZ',
       title: 'Voor Parnassia een complex intakeproces helder uitgelegd.',
       meta: 'Parnassia · Centrum Autisme Haaglanden · Uitleganimatie'
     },
@@ -118,7 +124,9 @@ document.addEventListener('DOMContentLoaded', () => {
       poster: 'assets/media/parnassia-wijkteams-poster.jpg',
       video: 'assets/previews/cards/parnassia-wijkteams-card.mp4',
       label: 'Bekijk case',
-      tags: ['Documentaire', 'Eventbranding', 'Parnassia'],
+      type: 'Documentairefilm',
+      service: 'Eventbranding',
+      industry: 'GGZ',
       title: '10 jaar GGZ wijkteams vertaald naar een complete storytellingervaring.',
       meta: 'Parnassia · GGZ wijkteams · Eventvisuals + documentaires'
     },
@@ -127,7 +135,9 @@ document.addEventListener('DOMContentLoaded', () => {
       poster: 'assets/media/gemiva-poster.jpg',
       video: 'assets/previews/cards/gemiva-card.mp4',
       label: 'Bekijk case',
-      tags: ['E-learning', 'Zorgdomotica', 'Gemiva'],
+      type: 'Trainingsvideo',
+      service: 'Trainingscontent',
+      industry: 'Gehandicaptenzorg',
       title: 'Complexe zorgdomotica vertaald naar trainingscontent die medewerkers dagelijks gebruiken.',
       meta: 'Gemiva · Zorgdomotica · Trainingscontent'
     },
@@ -135,7 +145,9 @@ document.addEventListener('DOMContentLoaded', () => {
       slug: 'leraren-van-het-jaar',
       video: 'assets/previews/cards/leraren-van-het-jaar-card.mp4',
       label: 'Bekijk case',
-      tags: ['Uitleganimatie', 'Activatie', 'Onderwijs'],
+      type: 'Uitleganimatie',
+      service: 'Activatiecampagne',
+      industry: 'Onderwijs',
       title: 'Een landelijke onderwijsverkiezing vertaald naar een speelse animatie die mensen activeert.',
       meta: 'Leraren van het Jaar · ImpactAll · Publiekscampagne'
     },
@@ -143,7 +155,9 @@ document.addEventListener('DOMContentLoaded', () => {
       slug: 'cao-rijk',
       video: 'assets/previews/cards/cao-rijk-card.mp4',
       label: 'Bekijk case',
-      tags: ['Awareness', 'Motion graphics', 'CAO Rijk'],
+      type: 'Campagnefilm',
+      service: 'Awarenesscampagne',
+      industry: 'Overheid',
       title: 'Een duurzame CAO-pilot vertaald naar een filmcampagne over beweging en systeemverandering.',
       meta: 'Ministerie van BZK · CAO Rijk · Awarenesscampagne'
     },
@@ -152,7 +166,9 @@ document.addEventListener('DOMContentLoaded', () => {
       poster: 'assets/media/europebarge-poster.jpg',
       video: 'assets/previews/cards/europebarge-card.mp4',
       label: 'Bekijk case',
-      tags: ['Corporate film', 'Offshore', 'Europebarge'],
+      type: 'Corporate film',
+      service: 'Projectfilm',
+      industry: 'Maritiem',
       title: 'Een offshore transportoperatie vertaald naar cinematografische precisie.',
       meta: 'Europebarge · Maritiem / heavy transport · Projectfilm'
     },
@@ -161,7 +177,9 @@ document.addEventListener('DOMContentLoaded', () => {
       poster: 'assets/media/portlantis-poster.jpg',
       video: 'assets/previews/cards/portlantis-card.mp4',
       label: 'Bekijk case',
-      tags: ['Projection mapping', 'Experience', 'Portlantis'],
+      type: 'Projection mapping',
+      service: 'Immersive experience',
+      industry: 'Educatie',
       title: 'Een 10+ meter projection mapping experience die de Rotterdamse haven voelbaar maakt.',
       meta: 'Portlantis · Bezoekerscentrum · Immersive experience'
     },
@@ -170,7 +188,9 @@ document.addEventListener('DOMContentLoaded', () => {
       poster: 'assets/media/socialdebt-poster.jpg',
       video: 'assets/previews/cards/socialdebt-card.mp4',
       label: 'Bekijk case',
-      tags: ['Motion design', 'Popup', 'Socialdebt'],
+      type: 'Motion design',
+      service: 'Activatiecampagne',
+      industry: 'Financieel',
       title: 'Meer dan 50 geanimeerde visuals voor een popupcampagne op Rotterdam Centraal.',
       meta: 'Socialdebt · Jongeren / schuldhulp · DOOH-content'
     },
@@ -179,7 +199,9 @@ document.addEventListener('DOMContentLoaded', () => {
       poster: 'assets/media/worldbank-poster.jpg',
       video: 'assets/previews/cards/world-bank-card.mp4',
       label: 'Bekijk case',
-      tags: ['Datavisualisatie', 'Motion design', 'World Bank'],
+      type: 'Uitleganimatie',
+      service: 'Datavisualisatie',
+      industry: 'Internationaal',
       title: 'Complexe voedselzekerheidsdata vertaald naar heldere animaties voor internationale besluitvorming.',
       meta: 'World Bank · Voedselzekerheid · Uitleganimaties'
     },
@@ -188,7 +210,9 @@ document.addEventListener('DOMContentLoaded', () => {
       poster: 'assets/media/channext-poster.jpg',
       video: 'assets/previews/cards/channext-card.mp4',
       label: 'Bekijk case',
-      tags: ['SaaS', 'Positionering', 'Channext'],
+      type: 'Positioneringsvideo',
+      service: 'B2B storytelling',
+      industry: 'SaaS',
       title: 'Complexe AI-gedreven channel marketing vertaald naar een helder B2B-verhaal.',
       meta: 'Channext · SaaS / B2B · Positioneringsvideo'
     },
@@ -197,7 +221,9 @@ document.addEventListener('DOMContentLoaded', () => {
       poster: 'assets/media/ictgroup-poster.jpg',
       video: 'assets/previews/cards/ict-group-card.mp4',
       label: 'Bekijk case',
-      tags: ['Motion design', 'B2B tech', 'ICT Group'],
+      type: 'Merkanimatie',
+      service: 'B2B positionering',
+      industry: 'Technologie',
       title: 'Complexe data vertaald naar een scherpe merkanimatie voor Applied Solutions.',
       meta: 'ICT Group · Applied Solutions · Brand animation'
     }
@@ -230,7 +256,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const card = document.createElement('a');
     card.className = templateCard?.className || 'card';
     card.href = casePath(item.slug);
+    card.dataset.type = item.type || '';
+    card.dataset.service = item.service || '';
+    card.dataset.industry = item.industry || '';
     const posterAttr = item.poster ? ` poster="${assetPath(item.poster)}"` : '';
+    const tags = item.tags || [item.type, item.service, item.industry].filter(Boolean);
     card.innerHTML = `
       <div class="card__media${item.mediaMode === 'contain' ? ' card__media--contain' : ''}">
         <video class="thumb" autoplay muted loop playsinline preload="metadata"${posterAttr}>
@@ -239,7 +269,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <span class="play-pill">${item.label}</span>
       </div>
       <div class="card__body">
-        <div class="card__tags">${item.tags.map(tag => `<span>${tag}</span>`).join('')}</div>
+        <div class="card__tags">${tags.map(tag => `<span>${tag}</span>`).join('')}</div>
         <h3 class="card__title">${item.title}</h3>
         ${showMeta ? `<p class="muted" style="font-size: 0.9375rem; margin-top: 0.5rem;">${item.meta}</p>` : '<span class="case-link-note">Naar case</span>'}
       </div>
@@ -279,8 +309,56 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
+  const initPortfolioFilters = () => {
+    const filterRoot = document.querySelector('[data-portfolio-filter]');
+    const workGrid = document.querySelector('.work-grid');
+    if (!filterRoot || !workGrid) return;
+
+    const selects = Array.from(filterRoot.querySelectorAll('[data-portfolio-filter-select]'));
+    const resultCount = filterRoot.querySelector('[data-portfolio-filter-count]');
+    const resetButton = filterRoot.querySelector('[data-portfolio-filter-reset]');
+
+    const labelMap = {
+      type: 'Alle typen',
+      service: 'Alle diensten',
+      industry: 'Alle branches'
+    };
+
+    selects.forEach(select => {
+      const key = select.dataset.portfolioFilterSelect;
+      const values = [...new Set(portfolioCases.map(item => item[key]).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'nl'));
+      select.replaceChildren(
+        new Option(labelMap[key] || 'Alles', ''),
+        ...values.map(value => new Option(value, value))
+      );
+    });
+
+    const applyFilters = () => {
+      const active = Object.fromEntries(selects.map(select => [select.dataset.portfolioFilterSelect, select.value]));
+      let visibleCount = 0;
+
+      workGrid.querySelectorAll('.portfolio-card').forEach(card => {
+        const visible = Object.entries(active).every(([key, value]) => !value || card.dataset[key] === value);
+        card.hidden = !visible;
+        if (visible) visibleCount += 1;
+      });
+
+      if (resultCount) {
+        resultCount.textContent = `${visibleCount} ${visibleCount === 1 ? 'case' : 'cases'}`;
+      }
+    };
+
+    selects.forEach(select => select.addEventListener('change', applyFilters));
+    resetButton?.addEventListener('click', () => {
+      selects.forEach(select => select.value = '');
+      applyFilters();
+    });
+    applyFilters();
+  };
+
   randomizeLogoMarquees();
   randomizePortfolioBlocks();
+  initPortfolioFilters();
 
   // Work carousel
   document.querySelectorAll('[data-work-carousel]').forEach(carousel => {
