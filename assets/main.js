@@ -79,11 +79,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  const isSubPage = window.location.pathname.split('/').filter(Boolean).length > 1;
-  const assetPath = (path) => `${isSubPage ? '../' : ''}${path}`;
+  const currentPath = window.location.pathname;
+  const isNestedPage = /\/(blog|diensten|landing|werk)\//.test(currentPath);
+  const assetPath = (path) => `${isNestedPage ? '../' : ''}${path}`;
   const casePath = (slug) => {
-    if (window.location.pathname.includes('/werk/')) return `${slug}.html`;
-    if (isSubPage) return `../werk/${slug}.html`;
+    if (currentPath.includes('/werk/')) return `${slug}.html`;
+    if (isNestedPage) return `../werk/${slug}.html`;
     return `werk/${slug}.html`;
   };
   const portfolioCases = [
