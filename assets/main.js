@@ -92,8 +92,8 @@ document.addEventListener('DOMContentLoaded', () => {
       slug: 'kinderkoepel',
       video: 'assets/previews/cards/kinderkoepel-card.mp4',
       label: 'Bekijk case',
-      type: 'Campagnefilm',
-      service: 'Recruitmentcampagne',
+      type: 'Recruitment',
+      service: 'Campagne',
       industry: 'Kinderopvang',
       title: 'Een recruitmentcampagne die laat zien wat het werk in de kinderopvang écht is.',
       meta: 'Kinderkoepel · Kinderopvang · Hero film + cuts'
@@ -102,8 +102,8 @@ document.addEventListener('DOMContentLoaded', () => {
       slug: 'parnassia-beveiliging',
       video: 'assets/previews/cards/parnassia-beveiliging-card.mp4',
       label: 'Bekijk case',
-      type: 'Recruitmentfilm',
-      service: 'Employer branding',
+      type: 'Recruitment',
+      service: 'Campagne',
       industry: 'GGZ',
       title: 'GGZ-beveiliging menselijk, betekenisvol en zichtbaar gemaakt.',
       meta: 'Parnassia · GGZ · Recruitmentcampagne'
@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
       video: 'assets/previews/cards/parnassia-wijkteams-card.mp4',
       label: 'Bekijk case',
       type: 'Documentairefilm',
-      service: 'Eventbranding',
+      service: 'Campagne',
       industry: 'GGZ',
       title: '10 jaar GGZ wijkteams vertaald naar een complete storytellingervaring.',
       meta: 'Parnassia · GGZ wijkteams · Eventvisuals + documentaires'
@@ -135,8 +135,8 @@ document.addEventListener('DOMContentLoaded', () => {
       poster: 'assets/media/gemiva-poster.jpg',
       video: 'assets/previews/cards/gemiva-card.mp4',
       label: 'Bekijk case',
-      type: 'Trainingsvideo',
-      service: 'Trainingscontent',
+      type: 'E-learning',
+      service: 'Uitlegcontent',
       industry: 'Gehandicaptenzorg',
       title: 'Complexe zorgdomotica vertaald naar trainingscontent die medewerkers dagelijks gebruiken.',
       meta: 'Gemiva · Zorgdomotica · Trainingscontent'
@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
       video: 'assets/previews/cards/leraren-van-het-jaar-card.mp4',
       label: 'Bekijk case',
       type: 'Uitleganimatie',
-      service: 'Activatiecampagne',
+      service: 'Campagne',
       industry: 'Onderwijs',
       title: 'Een landelijke onderwijsverkiezing vertaald naar een speelse animatie die mensen activeert.',
       meta: 'Leraren van het Jaar · ImpactAll · Publiekscampagne'
@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
       video: 'assets/previews/cards/cao-rijk-card.mp4',
       label: 'Bekijk case',
       type: 'Campagnefilm',
-      service: 'Awarenesscampagne',
+      service: 'Campagne',
       industry: 'Overheid',
       title: 'Een duurzame CAO-pilot vertaald naar een filmcampagne over beweging en systeemverandering.',
       meta: 'Ministerie van BZK · CAO Rijk · Awarenesscampagne'
@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
       video: 'assets/previews/cards/europebarge-card.mp4',
       label: 'Bekijk case',
       type: 'Corporate film',
-      service: 'Projectfilm',
+      service: 'Campagne',
       industry: 'Maritiem',
       title: 'Een offshore transportoperatie vertaald naar cinematografische precisie.',
       meta: 'Europebarge · Maritiem / heavy transport · Projectfilm'
@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
       video: 'assets/previews/cards/portlantis-card.mp4',
       label: 'Bekijk case',
       type: 'Projection mapping',
-      service: 'Immersive experience',
+      service: 'Uitlegcontent',
       industry: 'Educatie',
       title: 'Een 10+ meter projection mapping experience die de Rotterdamse haven voelbaar maakt.',
       meta: 'Portlantis · Bezoekerscentrum · Immersive experience'
@@ -189,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
       video: 'assets/previews/cards/socialdebt-card.mp4',
       label: 'Bekijk case',
       type: 'Motion design',
-      service: 'Activatiecampagne',
+      service: 'Campagne',
       industry: 'Financieel',
       title: 'Meer dan 50 geanimeerde visuals voor een popupcampagne op Rotterdam Centraal.',
       meta: 'Socialdebt · Jongeren / schuldhulp · DOOH-content'
@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
       video: 'assets/previews/cards/world-bank-card.mp4',
       label: 'Bekijk case',
       type: 'Uitleganimatie',
-      service: 'Datavisualisatie',
+      service: 'Uitlegcontent',
       industry: 'Internationaal',
       title: 'Complexe voedselzekerheidsdata vertaald naar heldere animaties voor internationale besluitvorming.',
       meta: 'World Bank · Voedselzekerheid · Uitleganimaties'
@@ -211,7 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
       video: 'assets/previews/cards/channext-card.mp4',
       label: 'Bekijk case',
       type: 'Positioneringsvideo',
-      service: 'B2B storytelling',
+      service: 'Doorlopende content',
       industry: 'SaaS',
       title: 'Complexe AI-gedreven channel marketing vertaald naar een helder B2B-verhaal.',
       meta: 'Channext · SaaS / B2B · Positioneringsvideo'
@@ -222,7 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
       video: 'assets/previews/cards/ict-group-card.mp4',
       label: 'Bekijk case',
       type: 'Merkanimatie',
-      service: 'B2B positionering',
+      service: 'Uitlegcontent',
       industry: 'Technologie',
       title: 'Complexe data vertaald naar een scherpe merkanimatie voor Applied Solutions.',
       meta: 'ICT Group · Applied Solutions · Brand animation'
@@ -309,56 +309,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  const initPortfolioFilters = () => {
-    const filterRoot = document.querySelector('[data-portfolio-filter]');
-    const workGrid = document.querySelector('.work-grid');
-    if (!filterRoot || !workGrid) return;
-
-    const selects = Array.from(filterRoot.querySelectorAll('[data-portfolio-filter-select]'));
-    const resultCount = filterRoot.querySelector('[data-portfolio-filter-count]');
-    const resetButton = filterRoot.querySelector('[data-portfolio-filter-reset]');
-
-    const labelMap = {
-      type: 'Alle typen',
-      service: 'Alle diensten',
-      industry: 'Alle branches'
-    };
-
-    selects.forEach(select => {
-      const key = select.dataset.portfolioFilterSelect;
-      const values = [...new Set(portfolioCases.map(item => item[key]).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'nl'));
-      select.replaceChildren(
-        new Option(labelMap[key] || 'Alles', ''),
-        ...values.map(value => new Option(value, value))
-      );
-    });
-
-    const applyFilters = () => {
-      const active = Object.fromEntries(selects.map(select => [select.dataset.portfolioFilterSelect, select.value]));
-      let visibleCount = 0;
-
-      workGrid.querySelectorAll('.portfolio-card').forEach(card => {
-        const visible = Object.entries(active).every(([key, value]) => !value || card.dataset[key] === value);
-        card.hidden = !visible;
-        if (visible) visibleCount += 1;
-      });
-
-      if (resultCount) {
-        resultCount.textContent = `${visibleCount} ${visibleCount === 1 ? 'case' : 'cases'}`;
-      }
-    };
-
-    selects.forEach(select => select.addEventListener('change', applyFilters));
-    resetButton?.addEventListener('click', () => {
-      selects.forEach(select => select.value = '');
-      applyFilters();
-    });
-    applyFilters();
-  };
-
   randomizeLogoMarquees();
   randomizePortfolioBlocks();
-  initPortfolioFilters();
 
   // Work carousel
   document.querySelectorAll('[data-work-carousel]').forEach(carousel => {
