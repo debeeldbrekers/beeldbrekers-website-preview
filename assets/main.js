@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
       video: 'assets/previews/cards/world-bank-card.mp4',
       label: 'Bekijk case',
       type: 'Uitleganimatie',
-      service: 'Uitlegcontent',
+      service: 'Doorlopende content',
       industry: 'Internationaal',
       title: 'Complexe voedselzekerheidsdata vertaald naar heldere animaties voor internationale besluitvorming.',
       meta: 'World Bank · Voedselzekerheid · Uitleganimaties'
@@ -222,7 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
       video: 'assets/previews/cards/ict-group-card.mp4',
       label: 'Bekijk case',
       type: 'Merkanimatie',
-      service: 'Uitlegcontent',
+      service: 'Doorlopende content',
       industry: 'Technologie',
       title: 'Complexe data vertaald naar een scherpe merkanimatie voor Applied Solutions.',
       meta: 'ICT Group · Applied Solutions · Brand animation'
