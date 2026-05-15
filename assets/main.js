@@ -158,6 +158,15 @@ document.addEventListener('DOMContentLoaded', () => {
       mediaMode: 'contain'
     },
     {
+      slug: 'socialdebt',
+      poster: 'assets/media/socialdebt-poster.jpg',
+      video: 'assets/previews/cards/socialdebt-card.mp4',
+      label: 'Bekijk case',
+      tags: ['Motion design', 'Popup', 'Socialdebt'],
+      title: 'Meer dan 50 geanimeerde visuals voor een popupcampagne op Rotterdam Centraal.',
+      meta: 'Socialdebt · Jongeren / schuldhulp · DOOH-content'
+    },
+    {
       slug: 'world-bank',
       poster: 'assets/media/worldbank-poster.jpg',
       video: 'assets/previews/cards/world-bank-card.mp4',
