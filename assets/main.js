@@ -154,7 +154,8 @@ document.addEventListener('DOMContentLoaded', () => {
       label: 'Bekijk case',
       tags: ['Projection mapping', 'Experience', 'Portlantis'],
       title: 'Een 10+ meter projection mapping experience die de Rotterdamse haven voelbaar maakt.',
-      meta: 'Portlantis · Bezoekerscentrum · Immersive experience'
+      meta: 'Portlantis · Bezoekerscentrum · Immersive experience',
+      mediaMode: 'contain'
     },
     {
       slug: 'world-bank',
@@ -214,7 +215,7 @@ document.addEventListener('DOMContentLoaded', () => {
     card.href = casePath(item.slug);
     const posterAttr = item.poster ? ` poster="${assetPath(item.poster)}"` : '';
     card.innerHTML = `
-      <div class="card__media">
+      <div class="card__media${item.mediaMode === 'contain' ? ' card__media--contain' : ''}">
         <video class="thumb" autoplay muted loop playsinline preload="metadata"${posterAttr}>
           <source src="${assetPath(item.video)}" type="video/mp4">
         </video>

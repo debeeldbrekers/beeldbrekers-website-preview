@@ -1096,6 +1096,11 @@ body > section > * {
   width: 100%; height: 100%; object-fit: cover;
   transition: transform 0.8s var(--ease);
 }
+.card__media--contain img,
+.card__media--contain video {
+  object-fit: contain;
+  background: var(--ink);
+}
 .card:hover .card__media img,
 .card:hover .card__media video { transform: scale(1.04); }
 .team-photo {
@@ -1830,6 +1835,9 @@ hr.rule { border: 0; border-top: 1px solid var(--rule); margin: 3rem 0; }
   height: 100%;
   object-fit: cover;
   display: block;
+}
+.card__media--contain video.thumb {
+  object-fit: contain;
 }
 .card__media .play-pill {
   position: absolute;
