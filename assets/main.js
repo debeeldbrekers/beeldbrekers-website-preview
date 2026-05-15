@@ -273,6 +273,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const selection = shuffle(portfolioCases).slice(0, isFullPortfolio ? portfolioCases.length : 3);
       block.innerHTML = '';
       selection.forEach(item => block.appendChild(renderPortfolioCard(item, templateCard, showMeta)));
+      if (block.matches('[data-reveal-stagger]')) {
+        requestAnimationFrame(() => block.classList.add('in'));
+      }
     });
   };
 

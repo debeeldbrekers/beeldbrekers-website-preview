@@ -1216,6 +1216,10 @@ body > section > * {
 .work-grid .card__body .muted {
   margin-top: auto !important;
 }
+.work-grid[data-reveal-stagger] > * {
+  opacity: 1;
+  transform: none;
+}
 .portfolio-card .card__body {
   gap: 0.75rem;
 }
