@@ -82,6 +82,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const currentPath = window.location.pathname;
   const isNestedPage = /\/(blog|diensten|landing|werk)\//.test(currentPath);
   const assetPath = (path) => `${isNestedPage ? '../' : ''}${path}`;
+  const portfolioMediaVersion = '20260518a';
+  const versionedAssetPath = (path) => `${assetPath(path)}?v=${portfolioMediaVersion}`;
   const casePath = (slug) => {
     if (currentPath.includes('/werk/')) return `${slug}.html`;
     if (isNestedPage) return `../werk/${slug}.html`;
@@ -259,12 +261,12 @@ document.addEventListener('DOMContentLoaded', () => {
     card.dataset.type = item.type || '';
     card.dataset.service = item.service || '';
     card.dataset.industry = item.industry || '';
-    const posterAttr = item.poster ? ` poster="${assetPath(item.poster)}"` : '';
+    const posterAttr = item.poster ? ` poster="${versionedAssetPath(item.poster)}"` : '';
     const tags = item.tags || [item.type, item.service, item.industry].filter(Boolean);
     card.innerHTML = `
       <div class="card__media${item.mediaMode === 'contain' ? ' card__media--contain' : ''}">
         <video class="thumb" autoplay muted loop playsinline preload="metadata"${posterAttr}>
-          <source src="${assetPath(item.video)}" type="video/mp4">
+          <source src="${versionedAssetPath(item.video)}" type="video/mp4">
         </video>
         <span class="play-pill">${item.label}</span>
       </div>
