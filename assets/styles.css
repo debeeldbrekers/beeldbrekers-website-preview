@@ -515,10 +515,19 @@ body > section > * {
 }
 @media (max-width: 620px) {
   .hero-heading,
-  .hero-heading span {
+  .hero-heading span,
+  .display-xl,
+  .display-l,
+  .display-m,
+  h1,
+  h2,
+  h3,
+  h4,
+  .card__title {
     max-width: 100%;
     white-space: normal;
-    overflow-wrap: break-word;
+    overflow-wrap: anywhere;
+    word-break: normal;
     hyphens: auto;
   }
   .display-xl,
