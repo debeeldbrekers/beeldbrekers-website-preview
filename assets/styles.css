@@ -1592,24 +1592,41 @@ body > section > * {
 .field input,
 .field textarea,
 .field select {
-  background: transparent;
-  border: 0;
-  border-bottom: 1px solid var(--rule-strong);
-  padding: 0.75rem 0;
+  background: rgba(255, 255, 255, 0.075);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 6px;
+  padding: 0.9rem 1rem;
   font-size: 1.125rem;
   font-weight: 500;
   outline: none;
-  transition: border-color 0.3s var(--ease);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  transition: background 0.3s var(--ease), border-color 0.3s var(--ease), box-shadow 0.3s var(--ease);
   color: inherit;
 }
+.surface-light .field input,
+.surface-light .field textarea,
+.surface-light .field select {
+  background: rgba(31, 27, 54, 0.08);
+  border-color: rgba(31, 27, 54, 0.2);
+  color: var(--purple);
+}
 .field input::placeholder,
-.field textarea::placeholder { color: rgba(255, 255, 255, 0.4); }
+.field textarea::placeholder { color: rgba(255, 255, 255, 0.52); }
 .surface-light .field input::placeholder,
-.surface-light .field textarea::placeholder { color: rgba(46, 41, 78, 0.4); }
+.surface-light .field textarea::placeholder { color: rgba(46, 41, 78, 0.52); }
 .field input:focus,
 .field textarea:focus,
 .field select:focus {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--mint);
+  box-shadow: 0 0 0 3px rgba(39, 255, 183, 0.16);
+}
+.surface-light .field input:focus,
+.surface-light .field textarea:focus,
+.surface-light .field select:focus {
+  background: rgba(255, 255, 255, 0.88);
   border-color: var(--pink);
+  box-shadow: 0 0 0 3px rgba(255, 43, 133, 0.14);
 }
 .field textarea { min-height: 120px; resize: vertical; font-family: inherit; }
 
