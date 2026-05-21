@@ -1532,6 +1532,10 @@ body > section > * {
   margin-bottom: 1rem;
 }
 .footer__col ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.6rem; font-size: 1rem; }
+.footer__address {
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.55;
+}
 .footer__col a:hover { color: var(--cyan); }
 .footer__bottom {
   display: flex;
@@ -1543,6 +1547,68 @@ body > section > * {
   flex-wrap: wrap;
   gap: 1rem;
 }
+.footer__bottom a,
+.landing-footer-row a {
+  color: inherit;
+  transition: color 0.3s var(--ease);
+}
+.footer__bottom a:hover,
+.landing-footer-row a:hover { color: var(--cyan); }
+.legal-shell .section-head {
+  margin-bottom: clamp(2rem, 4vw, 4rem);
+}
+.legal-content {
+  max-width: 78ch;
+}
+.legal-content > * + * {
+  margin-top: 1.25rem;
+}
+.legal-content article + article {
+  margin-top: clamp(2rem, 4vw, 3.5rem);
+}
+.legal-content h2 {
+  font-size: clamp(1.55rem, 2.8vw, 2.35rem);
+  max-width: 30ch;
+  margin-bottom: 1rem;
+}
+.legal-content h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.6rem;
+}
+.legal-content ul {
+  padding-left: 1.25rem;
+  display: grid;
+  gap: 0.45rem;
+}
+.legal-content address {
+  font-style: normal;
+  line-height: 1.7;
+}
+.legal-note {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 6px;
+  padding: clamp(1.25rem, 2vw, 1.75rem);
+  color: rgba(242, 237, 228, 0.84);
+}
+.faq-list details {
+  border-top: 1px solid var(--rule-strong);
+  padding-block: clamp(1.25rem, 2vw, 1.75rem);
+}
+.faq-list details:last-child { border-bottom: 1px solid var(--rule-strong); }
+.faq-list summary {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 2vw, 1.65rem);
+  font-weight: 700;
+  justify-content: space-between;
+  list-style: none;
+  gap: 1rem;
+}
+.faq-list summary::-webkit-details-marker { display: none; }
+.faq-list summary span:last-child { color: var(--accent); }
+.faq-list p { margin-top: 1rem; max-width: 62ch; }
 
 /* ---------- Reveal animations ---------- */
 [data-reveal] {
