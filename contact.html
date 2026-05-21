@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/styles.css?v=20260521a" />
+<link rel="stylesheet" href="assets/styles.css?v=20260521b" />
 <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/Favicon/favicon-32x32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="assets/brand/Favicon/favicon-16x16.png" />
 <link rel="apple-touch-icon" sizes="180x180" href="assets/brand/Favicon/apple-touch-icon.png" />
@@ -81,30 +81,34 @@
       <div class="col-span-7" data-reveal>
         <h2 style="margin-bottom: 2rem;">Project, vraag of <em class="italic">koffie</em>.</h2>
 
-        <form data-contact-form>
+        <form data-contact-form action="https://formsubmit.co/info@debeeldbrekers.nl" method="POST">
+          <input type="hidden" name="_subject" value="Nieuw contactformulier via debeeldbrekers.com">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="formulier" value="Contactpagina">
+          <input type="text" name="_honey" class="form-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
           <div class="grid grid-2">
             <div class="field">
               <label for="naam">Naam</label>
-              <input id="naam" type="text" required placeholder="Jouw naam">
+              <input id="naam" name="naam" type="text" required placeholder="Jouw naam">
             </div>
             <div class="field">
               <label for="bedrijf">Organisatie</label>
-              <input id="bedrijf" type="text" placeholder="Optioneel">
+              <input id="bedrijf" name="organisatie" type="text" placeholder="Optioneel">
             </div>
           </div>
           <div class="grid grid-2">
             <div class="field">
               <label for="email">E-mailadres</label>
-              <input id="email" type="email" required placeholder="je@e-mailadres.nl">
+              <input id="email" name="email" type="email" required placeholder="je@e-mailadres.nl">
             </div>
             <div class="field">
               <label for="telefoon">Telefoonnummer</label>
-              <input id="telefoon" type="tel" placeholder="Optioneel">
+              <input id="telefoon" name="telefoon" type="tel" placeholder="Optioneel">
             </div>
           </div>
           <div class="field">
             <label for="onderwerp">Wat speelt er?</label>
-            <select id="onderwerp">
+            <select id="onderwerp" name="onderwerp">
               <option>Een nieuwe campagne of project</option>
               <option>Doorlopende content</option>
               <option>Strategie sessie</option>
@@ -114,7 +118,7 @@
           </div>
           <div class="field">
             <label for="bericht">Vertel ons wat meer</label>
-            <textarea id="bericht" placeholder="Wat is het probleem dat je probeert op te lossen? Wat heb je al geprobeerd? Wat is de planning of het budget? Hoe meer context, hoe beter we kunnen meedenken voor het eerste gesprek."></textarea>
+            <textarea id="bericht" name="bericht" placeholder="Wat is het probleem dat je probeert op te lossen? Wat heb je al geprobeerd? Wat is de planning of het budget? Hoe meer context, hoe beter we kunnen meedenken voor het eerste gesprek."></textarea>
           </div>
           <button type="submit" class="btn btn--primary" style="margin-top: 1rem;">Verstuur bericht</button>
           <p class="muted" style="font-size: 0.8125rem; margin-top: 1rem;">We reageren binnen één werkdag. Geen automatische reply.</p>
@@ -187,6 +191,6 @@
   </div>
 </footer>
 
-<script src="assets/main.js?v=20260518b"></script>
+<script src="assets/main.js?v=20260521a"></script>
 </body>
 </html>

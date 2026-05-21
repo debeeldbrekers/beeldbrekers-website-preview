@@ -59,25 +59,61 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Form submit (demo only)
-  const form = document.querySelector('[data-contact-form]');
-  if (form) {
-    form.addEventListener('submit', e => {
+  // Send static-site forms without leaving the page when JavaScript is available.
+  document.querySelectorAll('[data-contact-form]').forEach(form => {
+    form.addEventListener('submit', async e => {
       e.preventDefault();
       const btn = form.querySelector('button[type="submit"]');
       const redirectUrl = form.dataset.redirect;
-      btn.textContent = 'Verzonden. We mailen je terug';
+      const originalLabel = btn.textContent;
+      const status = form.querySelector('[data-form-status]') || document.createElement('p');
+
+      if (!status.hasAttribute('data-form-status')) {
+        status.dataset.formStatus = '';
+        status.className = 'form-status';
+        status.setAttribute('role', 'status');
+        status.setAttribute('aria-live', 'polite');
+        btn.insertAdjacentElement('afterend', status);
+      }
+
+      btn.textContent = 'Versturen...';
       btn.disabled = true;
-      btn.style.background = 'var(--mint)';
-      btn.style.color = 'var(--purple)';
-      if (redirectUrl) {
-        btn.textContent = 'Verzonden. Je gaat door naar het aanbod';
-        window.setTimeout(() => {
-          window.location.href = redirectUrl;
-        }, 650);
+      status.className = 'form-status';
+      status.textContent = '';
+
+      try {
+        const endpoint = form.action.replace('formsubmit.co/', 'formsubmit.co/ajax/');
+        const response = await fetch(endpoint, {
+          method: form.method || 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' }
+        });
+
+        if (!response.ok) {
+          throw new Error(`Form submit failed with status ${response.status}`);
+        }
+
+        form.reset();
+        btn.textContent = 'Verzonden';
+        btn.classList.add('is-sent');
+        status.classList.add('is-success');
+        status.textContent = redirectUrl
+          ? 'Ontvangen. Je gaat door naar het aanbod.'
+          : 'Dank je. We mailen je binnen één werkdag terug.';
+
+        if (redirectUrl) {
+          window.setTimeout(() => {
+            window.location.href = redirectUrl;
+          }, 900);
+        }
+      } catch (error) {
+        btn.textContent = originalLabel;
+        btn.disabled = false;
+        status.classList.add('is-error');
+        status.textContent = 'Versturen lukt nu niet. Mail ons via info@debeeldbrekers.nl.';
       }
     });
-  }
+  });
 
   const currentPath = window.location.pathname;
   const isNestedPage = /\/(blog|diensten|landing|werk)\//.test(currentPath);

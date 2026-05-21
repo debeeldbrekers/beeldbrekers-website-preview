@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/styles.css" />
+<link rel="stylesheet" href="../assets/styles.css?v=20260521b" />
 <style>
   /* Landingspages: minimaal afleidende navigatie */
   .nav-lp { padding: 1.25rem var(--gutter); display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--rule); }
@@ -180,28 +180,32 @@
       </h2>
     </div>
 
-    <form data-contact-form class="surface-light" style="background: var(--white); padding: 2.5rem; border-radius: 6px;">
+    <form data-contact-form action="https://formsubmit.co/info@debeeldbrekers.nl" method="POST" class="surface-light" style="background: var(--white); padding: 2.5rem; border-radius: 6px;">
+      <input type="hidden" name="_subject" value="Nieuwe recruitment verkenning via debeeldbrekers.com">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="formulier" value="Recruitment campagne">
+      <input type="text" name="_honey" class="form-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
       <div class="grid grid-2">
         <div class="field">
           <label for="lp-naam">Naam</label>
-          <input id="lp-naam" type="text" required>
+          <input id="lp-naam" name="naam" type="text" required>
         </div>
         <div class="field">
           <label for="lp-org">Organisatie</label>
-          <input id="lp-org" type="text" required>
+          <input id="lp-org" name="organisatie" type="text" required>
         </div>
       </div>
       <div class="field">
         <label for="lp-email">E-mailadres</label>
-        <input id="lp-email" type="email" required>
+        <input id="lp-email" name="email" type="email" required>
       </div>
       <div class="field">
         <label for="lp-vacature">Welke functie staat (te lang) open?</label>
-        <input id="lp-vacature" type="text" required placeholder="Bijv. wijkverpleegkundigen, operators, leerkrachten…">
+        <input id="lp-vacature" name="vacature" type="text" required placeholder="Bijv. wijkverpleegkundigen, operators, leerkrachten…">
       </div>
       <div class="field">
         <label for="lp-bericht">Wat heb je al geprobeerd?</label>
-        <textarea id="lp-bericht" placeholder="Optioneel: hoe meer context, hoe gerichter we kunnen reageren."></textarea>
+        <textarea id="lp-bericht" name="context" placeholder="Optioneel: hoe meer context, hoe gerichter we kunnen reageren."></textarea>
       </div>
       <button type="submit" class="btn btn--primary" style="width: 100%; justify-content: center;">Plan verkenning</button>
       <p class="muted" style="font-size: 0.8125rem; margin-top: 1rem; text-align: center;">Reactie binnen één werkdag · Geen verplichting · Geen automatische reply</p>
@@ -217,6 +221,6 @@
   </div>
 </footer>
 
-<script src="../assets/main.js"></script>
+<script src="../assets/main.js?v=20260521a"></script>
 </body>
 </html>

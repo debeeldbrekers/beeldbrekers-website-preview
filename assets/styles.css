@@ -1700,6 +1700,22 @@ body > section > * {
   box-shadow: 0 0 0 3px rgba(255, 43, 133, 0.14);
 }
 .field textarea { min-height: 120px; resize: vertical; font-family: inherit; }
+.form-honey {
+  display: none;
+}
+.form-status {
+  margin-top: 1rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+.form-status.is-success { color: var(--mint); }
+.form-status.is-error { color: var(--pink); }
+.surface-light .form-status.is-success { color: var(--purple); }
+.surface-light .form-status.is-error { color: var(--pink-deep); }
+.btn.is-sent {
+  background: var(--mint);
+  color: var(--purple);
+}
 
 /* ---------- Utility ---------- */
 .muted { color: rgba(255, 255, 255, 0.72); }

@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/styles.css?v=20260521a" />
+<link rel="stylesheet" href="../assets/styles.css?v=20260521b" />
 <link rel="icon" type="image/png" sizes="32x32" href="../assets/brand/Favicon/favicon-32x32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="../assets/brand/Favicon/favicon-16x16.png" />
 <link rel="apple-touch-icon" sizes="180x180" href="../assets/brand/Favicon/apple-touch-icon.png" />
@@ -184,7 +184,11 @@
             <li>Volgende stap binnen één werkdag</li>
           </ul>
         </div>
-        <form data-contact-form class="lp-form surface-light" data-reveal>
+        <form data-contact-form action="https://formsubmit.co/info@debeeldbrekers.nl" method="POST" class="lp-form surface-light" data-reveal>
+          <input type="hidden" name="_subject" value="Nieuwe campagnescan via debeeldbrekers.com">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="formulier" value="Campagnescan offer">
+          <input type="text" name="_honey" class="form-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
           <div class="field">
             <label for="offer-naam">Naam</label>
             <input id="offer-naam" name="naam" type="text" required>
@@ -202,7 +206,7 @@
             <textarea id="offer-context" name="context" placeholder="Bijv. te weinig sollicitaties, lage adoptie, onduidelijke uitleg, weinig aanvragen..."></textarea>
           </div>
           <button class="btn btn--primary" type="submit">Plan mijn campagnescan</button>
-          <p class="muted">Template-notitie: koppel dit formulier later aan planning, CRM of e-mailautomation.</p>
+          <p class="muted">Reactie binnen één werkdag. Geen automatische reply.</p>
         </form>
       </div>
     </div>
@@ -216,6 +220,6 @@
   </div>
 </footer>
 
-<script src="../assets/main.js?v=20260518b"></script>
+<script src="../assets/main.js?v=20260521a"></script>
 </body>
 </html>
