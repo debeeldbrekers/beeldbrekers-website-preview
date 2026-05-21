@@ -52,6 +52,7 @@
   --gutter: clamp(1.25rem, 3vw, 2.5rem);
   --section-y: clamp(4rem, 10vw, 9rem);
   --maxw: 1480px;
+  --home-logo-marquee-height: clamp(5.75rem, 10vw, 9rem);
 
   /* Motion */
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
@@ -908,7 +909,8 @@ body > section > * {
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: calc(100vh - var(--home-logo-marquee-height));
+  min-height: calc(100svh - var(--home-logo-marquee-height));
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -1062,6 +1064,9 @@ body > section > * {
   to { transform: translateX(-100%); }
 }
 
+.hero + .marquee--logos {
+  min-height: var(--home-logo-marquee-height);
+}
 .marquee--logos {
   padding-block: clamp(1.25rem, 2.5vw, 2rem);
   background: var(--purple-night);
